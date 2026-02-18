@@ -1,0 +1,18 @@
+﻿<Page x:Class="Abazov_323.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Линейная функция">
+    <StackPanel Margin="20">
+        <Image Source="/task1.png" Height="100" Margin="10" Stretch="Uniform"/>
+        <TextBlock Text="Введите x:"/>
+        <TextBox x:Name="txtX" Margin="0,5" ToolTip="Введите значение x"/>
+        <TextBlock Text="Введите y:"/>
+        <TextBox x:Name="txtY" Margin="0,5" ToolTip="Введите значение y"/>
+        <TextBlock Text="Введите z:"/>
+        <TextBox x:Name="txtZ" Margin="0,5" ToolTip="Введите значение z"/>
+        <Button Content="Вычислить" Click="btnCalculate_Click" Margin="0,10" Height="30"/>
+        <TextBlock Text="Результат:"/>
+        <TextBox x:Name="txtResult" IsReadOnly="True" Margin="0,5" Background="#F0F0F0"/>
+        <Button Content="Очистить" Click="btnClear_Click" Margin="0,5"/>
+    </StackPanel>
+</Page>

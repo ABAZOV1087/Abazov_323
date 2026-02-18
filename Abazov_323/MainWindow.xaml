@@ -1,12 +1,22 @@
 ﻿<Window x:Class="Abazov_323.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Abazov_323"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Практическая работа 4 Абазов и Ахрамеев" Height="500" Width="900" Closing="Window_Closing">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#ECECEC">
+            <TextBlock Text="Навигация" HorizontalAlignment="Center" Margin="10" FontWeight="Bold"/>
+            <Button Content="Линейный расчет" Margin="5" Height="35" Click="GoPage1" ToolTip="Перейти к расчету первой функции"/>
+            <Button Content="Разветвление" Margin="5" Height="35" Click="GoPage2" ToolTip="Перейти к расчету с условиями"/>
+            <Button Content="Цикл и График" Margin="5" Height="35" Click="GoPage3" ToolTip="Перейти к табулированию функции"/>
+            <Separator Margin="5,10"/>
+            <Button Content="Выход" Margin="5" Height="35" Click="ExitApp" Background="#FFD6D6" ToolTip="Закрыть приложение"/>
+        </StackPanel>
+
+        <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

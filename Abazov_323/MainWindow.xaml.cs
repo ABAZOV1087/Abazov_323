@@ -15,14 +15,24 @@ using System.Windows.Shapes;
 
 namespace Abazov_323
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Page1());
+        }
+
+        private void GoPage1(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Page1());
+        private void GoPage2(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Page2());
+        private void GoPage3(object sender, RoutedEventArgs e) => MainFrame.Navigate(new Page3());
+
+        private void ExitApp(object sender, RoutedEventArgs e) => Close();
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Завершить работу?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No) e.Cancel = true;
         }
     }
 }
