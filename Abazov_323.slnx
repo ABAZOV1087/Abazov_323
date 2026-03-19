@@ -2,5 +2,6 @@
   <Folder Name="/Readme_pr/">
     <File Path="README.md" />
   </Folder>
-  <Project Path="Abazov_323/Abazov_323.csproj" />
+  <Project Path="Abazov_323/Abazov_323.csproj" Id="f0de89d9-26d7-4dd7-bc06-fe2ad6c97379" />
+  <Project Path="TestProject1/TestProject1.csproj" Id="482fce7c-e4f5-4766-b1ef-3870d1e48479" />
 </Solution>
